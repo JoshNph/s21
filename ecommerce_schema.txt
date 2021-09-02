@@ -1,0 +1,40 @@
+===USERS DATA MODEL===
+User
+
+_id: ObjectId
+username: String
+password: String
+status: String //active or not active
+isActive: Boolean
+sessions: [
+	sessionId: ObjectId
+]
+
+===PRODUCTS DATA MODEL===
+Product
+
+_id: ObjectId
+productName: String
+productDesc: String
+price: Number
+stockAvailable: Number
+manufacturer: ObjectId
+
+===MANUFACTURERS DATA MODEL===
+Manufacturer
+
+_id: ObjectId
+manufacturerName: String
+products: [
+	productId: ObjectId
+]
+
+===SESSIONS DATA MODEL===
+Session
+
+_id: ObjectId
+total: Number
+items: [
+	productId: ObjectId
+	quantity: Number
+]
